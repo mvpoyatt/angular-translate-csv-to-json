@@ -4,7 +4,7 @@ var Config = require(path.resolve(process.cwd(), process.argv[2]));
 var CsvParser = require('./csv-parser');
 var DirManager = require('./dir-manager');
 var StringCheck = require('./string-check');
-var JsonFormat = require('./json-format');
+// var JsonFormat = require('./json-format');
 
 module.exports = {
     generateJson: generateJson
@@ -27,7 +27,7 @@ function generateJson() {
 
                 (function (translations, filePath) {
                     DirManager.ensureDirectoryExistence(filePath);
-                    var jsonContent = JsonFormat(translations);
+                    // var jsonContent = JsonFormat(translations);
 
                     fs.writeFile(filePath, jsonContent, function (error) {
                         if (error) {
