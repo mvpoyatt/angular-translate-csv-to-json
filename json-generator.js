@@ -29,7 +29,7 @@ function generateJson() {
                     DirManager.ensureDirectoryExistence(filePath);
                     // var jsonContent = JsonFormat(translations);
 
-                    fs.writeFile(filePath, jsonContent, function (error) {
+                    fs.writeFile(filePath, /*jsonContent,*/ function (error) {
                         if (error) {
                             console.error('write error:  ' + error.message);
                         }
